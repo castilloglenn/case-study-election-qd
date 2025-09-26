@@ -208,3 +208,5 @@ __marimo__/
 
 # Etcetera
 .vscode
+
+.DS_Store
