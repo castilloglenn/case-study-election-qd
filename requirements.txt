@@ -1,5 +1,5 @@
-pandas==2.3.2
-numpy==2.3.3
-matplotlib==3.10.6
-tabulate==0.9.0
-seaborn==0.13.2
+pandas==2.3.2      # Essential for data manipulation and analysis; provides DataFrame structures and powerful data operations.
+numpy==2.3.3       # Fundamental package for numerical computations; supports arrays, mathematical functions, and linear algebra.
+matplotlib==3.10.6 # Core library for creating static, animated, and interactive visualizations in Python.
+tabulate==0.9.0    # Used to format tabular data in plain-text tables; helpful for displaying results in a readable way.
+seaborn==0.13.2    # High-level interface for drawing attractive statistical graphics; built on top of matplotlib for enhanced plots.
