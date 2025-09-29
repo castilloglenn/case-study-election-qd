@@ -1,3 +1,30 @@
+# -----------------------------------------------------------------------------
+# Title: Latency and Success Rate Analysis for Election System Validation
+# Author: Allen Glenn E. Castillo
+# Date: September 29, 2025
+#
+# Description:
+# This script analyzes latency and success rate metrics from election system
+# validation experiments. It generates two figures:
+#   1. Average latency vs. total voters, grouped by scenario and replication.
+#      Optionally, it can shade the area between mean and p95 latency.
+#   2. Success rate by scenario and replication, shown as a bar chart.
+#
+# Input:
+#   - CSV file at 'results/validation_results.csv' containing columns:
+#       n_total_votes, latency_avg_ms, latency_p95_ms, scenario, replication, success_rate
+#
+# Output:
+#   - PNG figures saved in 'results/figures/':
+#       latency_vs_voters.png
+#       success_rate_by_scenario.png
+#
+# Usage:
+#   Run this script after generating the validation_results.csv file.
+#   Figures are saved automatically; paths are printed at the end.
+#
+# -----------------------------------------------------------------------------
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -15,6 +42,8 @@ df = pd.read_csv(INFILE)
 # -----------------------------
 # Figure 1: Latency vs voters
 # -----------------------------
+# Plots average latency (ms) against total number of voters (n_total_votes).
+# Each line represents a scenario and replication. Markers are used for clarity.
 plt.figure(figsize=(7, 4))
 ax = sns.lineplot(
     data=df,
@@ -62,7 +91,8 @@ plt.close()
 # ---------------------------------------
 # Figure 2: Success rate by scenario/rep
 # ---------------------------------------
-# Aggregate (it’s constant across n in your CSV, but this keeps it general)
+# Aggregates success rate by scenario and replication.
+# Plots as a bar chart, with percentage annotations on each bar.
 agg = df.groupby(["scenario", "replication"], as_index=False)["success_rate"].mean()
 
 plt.figure(figsize=(6, 4))
