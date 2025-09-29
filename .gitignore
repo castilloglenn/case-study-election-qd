@@ -1,3 +1,9 @@
+# ------------------------------------------------------------
+# Research Paper Annotation
+# Author: Allen Glenn E. Castillo
+# Date: September 29, 2025
+# ------------------------------------------------------------
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
