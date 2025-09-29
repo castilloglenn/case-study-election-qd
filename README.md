@@ -24,6 +24,7 @@ This repository contains scripts and documentation for a research study on distr
 
 1. Run the main script to generate summarized experimental results for each parameter combination. The simulation logic is provided by the `simulate` function in `network_simulation.py`.
 2. Output is written to `results/sim_runs.csv` for downstream analysis and visualization.
+3. Alternatively, execute `scripts/sweep.py` to perform a comprehensive parameter sweep. This script systematically explores all combinations of key parameters (voter count, node failure rate, base network latency, DoS attack presence, replication factor), runs multiple simulation replicates, and writes aggregated results with mean and 95% confidence intervals to `results/sim_runs.csv`.
 
 ---
 
