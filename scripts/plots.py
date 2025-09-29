@@ -1,3 +1,32 @@
+# ------------------------------------------------------------------------------
+# Author: Allen Glenn E. Castillo
+# Date: September 29, 2025
+# ------------------------------------------------------------------------------
+# This script generates key plots for the case study on election system performance
+# under various conditions. The data is read from simulation results and visualized
+# to support analysis in the research paper.
+#
+# Plot 1: Latency vs. Voters
+#   - For each replication factor, plots average latency as a function of voter count.
+#   - Separate lines for DoS attack on/off.
+#   - Error bars represent 95% confidence intervals.
+#   - Only includes runs with 10% failure rate and 25ms base latency.
+#
+# Plot 2: Throughput vs. Replication Factor
+#   - Bar plot of throughput (votes per second) for different replication factors.
+#   - Only considers runs with DoS attack enabled, 10,000 voters, 25ms base latency,
+#     and 10% failure rate.
+#   - Error bars show 95% confidence intervals.
+#
+# Plot 3: Success Rate Heatmap
+#   - Heatmap of success rate (%) as a function of voter count and replication factor.
+#   - Only includes runs with DoS attack enabled, 25ms base latency, and 10% failure rate.
+#   - Annotates each cell with the corresponding success rate value.
+#
+# Output:
+#   - Figures are saved in the 'results/figures' directory as PNG files.
+# ------------------------------------------------------------------------------
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
